@@ -8,11 +8,13 @@ export const anotherExample = () => {
   return 'OMG';
 }; */
 
-export const filterLol = () => {
+/*export const filterLol = () => {
   array.function (key , type, id, image);
 }
     return function
   
  
 
-  //return 'example'
+  //return 'example' */
+
+
