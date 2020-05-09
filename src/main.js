@@ -12,15 +12,15 @@ let lolData = [];
 console.log(lolData)
 
 
-document.getElementById("btn").addEventListener("click",print)
+document.getElementById("btn").addEventListener("click", print)
 function print () {
   let summonerName = document.getElementById("start").value;
      if (summonerName == "") {
       alert("Verifique se inseriu seu nome invocador");
 
   } else {
-     document.getElementById("hello").innerHTML = "Olá  " + summonerName
-  };
+    window.location.href='index2.html' && document.getElementById("hello").innerHTML, "Olá  " + summonerName
+  }
 }
 
 
