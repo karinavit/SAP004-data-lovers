@@ -12,7 +12,7 @@ let lolData = [];
 console.log(lolData)
 
 
-document.getElementById("btn").addEventListener("click", print)
+/*document.getElementById("btn").addEventListener("click", print)
 function print () {
   let summonerName = document.getElementById("start").value;
      if (summonerName == "") {
@@ -22,20 +22,20 @@ function print () {
     document.getElementById("hello").innerHTML = summonerName
   }
 }
+*/
 
-
-/*document.getElementById("btn").addEventListener("click", print)
+document.getElementById('btn').addEventListener('click', print)
 function print () {
-  sessionStorage.name = document.getElementById("start").value;
-  //let summonerName = document.getElementById("start").value;
-    if (sessionStorage.name == "") {
-      alert("Verifique se inseriu seu nome invocador");
+  sessionStorage.setItem('summonerName', document.getElementById('start').value);
+  var checkSummonerName = sessionStorage.getItem('summonerName');
+    if (checkSummonerName == '') {
+      alert('Verifique se inseriu seu nome invocador');
     } else {
-      document.getElementById("hello").innerHTML = sessionStorage.name;
-      window.location.href="index2.html"
+      window.location.href='index2.html'
+      document.getElementById('hello').innerHTML= checkSummonerName;
     
   }
-}*/
+}
 
 //document.getElementById("hello").innerHTML = sessionStorage.name
 
@@ -75,12 +75,11 @@ function print () {
 }
 */
 
-    
 
 
 
 
-
+/*
 function createNewDiv(name){
   let cards = document.createElement('div');
   
@@ -104,3 +103,4 @@ function showAllCards(){
 }
 
 showAllCards();
+*/

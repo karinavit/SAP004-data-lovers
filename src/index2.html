@@ -5,8 +5,7 @@
     <title>All the Legends</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body id="wall">
-    
+  <body id="wall" onload="setName()">
     <header>
       <img id="top-img" src="imagens/alllegends.png" alt="">
       <nav id="menu">
@@ -17,13 +16,12 @@
     </nav>
     </header>
     <div id="container">
-    </br>
-      <h2 id="hello"></h2>
+      <h2 id="hello" value = "summonerName"></h2>
       <p>All the Legends é um site desenvolvido para você visualizar 
       a lista de campeões e assim escolher o melhor para sua estratégia de jogo.</p>
     </div>  
     <footer class="dev-name">Desenvolvido por Dri Fernando e Ka Vitangelo</footer>
     <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <script type = "text/javascript" src="index2main.js" type="module"></script>
   </body>
 </html>
