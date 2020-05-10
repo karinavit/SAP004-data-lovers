@@ -17,11 +17,68 @@ function print () {
   let summonerName = document.getElementById("start").value;
      if (summonerName == "") {
       alert("Verifique se inseriu seu nome invocador");
-
-  } else {
-    window.location.href='index2.html' && document.getElementById("hello").innerHTML, "Olá  " + summonerName
+    } else {
+    window.location.href='index2.html'
+    document.getElementById("hello").innerHTML = summonerName
   }
 }
+
+
+/*document.getElementById("btn").addEventListener("click", print)
+function print () {
+  sessionStorage.name = document.getElementById("start").value;
+  //let summonerName = document.getElementById("start").value;
+    if (sessionStorage.name == "") {
+      alert("Verifique se inseriu seu nome invocador");
+    } else {
+      document.getElementById("hello").innerHTML = sessionStorage.name;
+      window.location.href="index2.html"
+    
+  }
+}*/
+
+//document.getElementById("hello").innerHTML = sessionStorage.name
+
+/*function page(){
+  sessionStorage.name = (document.getElementById("start").value;
+  location.href = ("index2.html")
+}
+function iniciar(){
+    document.getElementById("btn").addEventListener("click", function print(){
+      document.getElementById("hello").innerHTML = sessionStorage.name
+    },page);
+  }
+
+window.addEventListener("load", iniciar);*/
+
+//função que captura o valor de um input na página 1
+
+/*document.getElementById("btn").addEventListener("click", print)
+function print () {
+  sessionStorage.setItem = document.getElementById("start").value;
+  //let summonerName = document.getElementById("start").value;
+    if (sessionStorage.name == "") {
+      alert("Verifique se inseriu seu nome invocador");
+    } else {
+      document.getElementById("hello").innerHTML = sessionStorage.getItem;
+      window.location.href="index2.html"
+    
+  }*/
+
+ /* document.getElementById('btn').addEventListner("click", print)
+  function print() {
+    var name = document.getElementById('start').value;
+    var teste = sessionStorage.setItem(name); 
+    location.href='index2.html'
+    var data = sessionStorage.getItem(teste);
+   document.getElementById('hello').innerHTML = data;
+}
+*/
+
+    
+
+
+
 
 
 function createNewDiv(name){
@@ -47,14 +104,3 @@ function showAllCards(){
 }
 
 showAllCards();
-
-console.log(lolList)
-
-
-
-
-
-
-
-
-
