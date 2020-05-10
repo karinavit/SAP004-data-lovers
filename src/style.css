@@ -59,7 +59,7 @@ button{
   background-color: #5F9EA0;
 }
 
-.dev-name{
+/*.dev-name{
   background-color: #2F4F4F;
   height: 13px;
   padding: 3px 0;
@@ -68,7 +68,7 @@ button{
   font-size: 12px;
   text-align: center;
 }
-
+*/
 /* html2 */
 
 #top-img{
@@ -84,6 +84,7 @@ button{
   height: 20px;
   background-color: #2F4F4F;
   text-align: center;
+  list-style: none;
   padding: 5px;
   border-top: 5px ridge #5F9EA0;
   border-bottom: 5px ridge #5F9EA0;
@@ -91,7 +92,7 @@ button{
   bottom: 65px;
 }
 
-#container{
+/*#container{
   width: 900px;
   height:400px;
   background-color: #2F4F4F;
@@ -101,7 +102,7 @@ button{
   left: 200px;
   padding: 10px;
 }
-
+*/
 
 
 
