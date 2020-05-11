@@ -15,9 +15,8 @@ function print () {
       alert('Verifique se inseriu seu nome invocador');
     } else {
       window.location.href='index2.html'
-      document.getElementById('hello').innerHTML= checkSummonerName;
-    
-  }
+      document.getElementById('hello').innerHTML = sessionStorage.getItem('summonerName');
+    }
 };
 
 let lolData = [];
@@ -26,23 +25,22 @@ let lolData = [];
  }
 console.log(lolData)
 //função para printar personagens na tela
-  function createNewDiv(name){
-  let cards = document.createElement('div');
-  cards.innerHTML = (`<p>${lol.data = name}</p>`);
-  return cards
-  };
- 
-let lolList = document.getElementById("list");
 
 function showAllCards(){
-  //lolList.innerHTML = name
+  function createNewDiv(photo, nome){
+  let cards = document.createElement('div');
+  cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
+  return cards
+  };
+
   for (let list in lol.data) {
-  let eachCard = createNewDiv(list);
+  let eachCard = createNewDiv(lol.data[list].img, lol.data[list].name);
   lolList.appendChild(eachCard);
   }
-  return list
-};
+}
 showAllCards();
+
+
 
 const orderAz =lolData.sort((a, b) => {
   return (a.name < b.name) ? - 1 : 1
