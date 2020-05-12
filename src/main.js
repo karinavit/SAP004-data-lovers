@@ -7,7 +7,7 @@ import { orderAz, orderZa } from './data.js';
 
 //codigo para pegar o valor do input e imprimir no index2
 
-document.getElementById('btn').addEventListener('click', print);
+/*document.getElementById('btn').addEventListener('click', print);
 function print () {
   sessionStorage.setItem('summonerName', document.getElementById('start').value);
   var checkSummonerName = sessionStorage.getItem('summonerName');
@@ -17,13 +17,13 @@ function print () {
       window.location.href='index2.html'
       document.getElementById('hello').innerHTML = sessionStorage.getItem('summonerName');
     }
-};
+};*/
 
-let lolData = [];
+let lolArchive = [];
  for (let item in lol.data) {
-   lolData.push(lol.data[item]);
+   lolArchive.push(lol.data[item]);
  }
-console.log(lolData)
+console.log(lolArchive)
 
 //função para printar personagens na tela
 let lolList = document.getElementById("list");
