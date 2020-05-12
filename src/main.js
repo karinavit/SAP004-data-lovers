@@ -2,7 +2,7 @@ import lol from './data/lol/lol.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 // console.log(example, data);
 
-//import { filterLol } from 'data.js';
+import { orderAz, orderZa } from './data.js';
 // import data from './data/lol/lol.js';
 
 //codigo para pegar o valor do input e imprimir no index2
@@ -24,8 +24,9 @@ let lolData = [];
    lolData.push(lol.data[item]);
  }
 console.log(lolData)
-//função para printar personagens na tela
 
+//função para printar personagens na tela
+let lolList = document.getElementById("list");
 function showAllCards(){
   function createNewDiv(photo, nome){
   let cards = document.createElement('div');
@@ -41,17 +42,21 @@ function showAllCards(){
 showAllCards();
 
 
-
-const orderAz =lolData.sort((a, b) => {
-  return (a.name < b.name) ? - 1 : 1
-});
-
-console.log(orderAz)
-
-const orderzA =lolData.sort((a, b) => {
-  return (a.name > b.name) ? - 1 : 1
-});
-
-console.log(orderzA)
-  //return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+const ordenar = document.getElementById('ordenar')
+document.getElementById('ordenar').addEventListener('change', Az)
+function Az (){
+  const indexSelect = ordenar.selectedIndex
+  const itemSelect = ordenar[indexSelect].value
+  if(itemSelect === "a-z"){
+    console.log (orderAz(lolArchive))
+    orderAz(lolArchive)  
+  } else {
+    console.log (orderZa(lolArchive))
+    orderZa(lolArchive)
+  };
+  
+  //console.log(ordenar[itemSelect].value)
+  
+  //showAllCards(orderAz);
+};
 

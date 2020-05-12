@@ -17,4 +17,11 @@ export const anotherExample = () => {
 
   //return 'example' */
 
+  export const orderAz =(lolArchive)=>lolArchive.sort((a, b) => {
+    return (a.name < b.name) ? - 1 : 1
+  });
+  export const orderZa =(lolArchive)=>lolArchive.sort((a, b) => {
+    return (a.name > b.name) ? - 1 : 1
+  }); 
+
 
