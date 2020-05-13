@@ -2,12 +2,12 @@ import lol from './data/lol/lol.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 // console.log(example, data);
 
-import { orderAz, orderZa } from './data.js';
+import { orderAz, orderZa,filterLol } from './data.js';
 // import data from './data/lol/lol.js';
 
 //codigo para pegar o valor do input e imprimir no index2
 
-document.getElementById('btn').addEventListener('click', print);
+/*document.getElementById('btn').addEventListener('click', print);
 function print () {
   sessionStorage.setItem('summonerName', document.getElementById('start').value);
   var checkSummonerName = sessionStorage.getItem('summonerName');
@@ -17,29 +17,30 @@ function print () {
       window.location.href='index2.html'
       document.getElementById('hello').innerHTML = sessionStorage.getItem('summonerName');
     }
-};
-
-let lolData = [];
+};*/
+let lolArchive = [];
  for (let item in lol.data) {
-   lolData.push(lol.data[item]);
+   lolArchive.push(lol.data[item]);
  }
-console.log(lolData)
+console.log(lolArchive)
 
 //função para printar personagens na tela
 let lolList = document.getElementById("list");
-function showAllCards(){
-  function createNewDiv(photo, nome){
+function showAllCards(data){
+ lolList.innerHTML=""
+
+  for (let list in data) {
+  let eachCard = createNewDiv(data[list].img,data[list].name);
+  lolList.appendChild(eachCard);
+  }
+}
+function createNewDiv(photo, nome){
   let cards = document.createElement('div');
   cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
   return cards
   };
 
-  for (let list in lol.data) {
-  let eachCard = createNewDiv(lol.data[list].img, lol.data[list].name);
-  lolList.appendChild(eachCard);
-  }
-}
-showAllCards();
+showAllCards(lolArchive);
 
 
 const ordenar = document.getElementById('ordenar')
@@ -49,14 +50,29 @@ function Az (){
   const itemSelect = ordenar[indexSelect].value
   if(itemSelect === "a-z"){
     console.log (orderAz(lolArchive))
-    orderAz(lolArchive)  
+    showAllCards(orderAz(lolArchive))   
+    
   } else {
     console.log (orderZa(lolArchive))
-    orderZa(lolArchive)
+    
+    showAllCards(orderZa(lolArchive))
+    }; 
   };
-  
+
+
+document.getElementById('as').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Assassin")))
+
+document.getElementById('ma').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Mage")))
+
+document.getElementById('lu').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Fighter")))
+
+document.getElementById('at').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Marksman")))
+
+document.getElementById('su').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Support")))
+
+document.getElementById('ta').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Tank")))
+
+
   //console.log(ordenar[itemSelect].value)
   
   //showAllCards(orderAz);
-};
-
