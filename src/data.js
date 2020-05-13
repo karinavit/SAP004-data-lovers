@@ -9,24 +9,10 @@ export function filterLol(lolArchive, typeChampions) {
   return lolArchive.filter(item => item.tags.includes(typeChampions));
   }; 
 
+  /* export let searchName = function searchLol(lolArchive, nameChampions) {
+    return lolArchive.search(item => item.name(nameChampions));
+    };  */
 
-
-// funções de exemplo
-
-/* export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-}; */
-
-/*export const filterLol = () => {
-  array.function (key , type, id, image);
-}
-    return function
-  
- 
-
-  //return 'example' */
-
+export function searchName(lolArchive, nameChampions) {
+  return lolArchive.filter(item => item.name.includes(nameChampions));
+  };

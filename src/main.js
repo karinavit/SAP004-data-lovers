@@ -2,7 +2,7 @@ import lol from './data/lol/lol.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 // console.log(example, data);
 
-import { orderAz, orderZa,filterLol } from './data.js';
+import { orderAz, orderZa, filterLol, searchName } from './data.js';
 // import data from './data/lol/lol.js';
 
 //codigo para pegar o valor do input e imprimir no index2
@@ -19,16 +19,15 @@ function print () {
     }
 };*/
 let lolArchive = [];
- for (let item in lol.data) {
-   lolArchive.push(lol.data[item]);
- }
+  for (let item in lol.data){
+  lolArchive.push(lol.data[item]);
+};
 console.log(lolArchive)
 
 //função para printar personagens na tela
 let lolList = document.getElementById("list");
 function showAllCards(data){
- lolList.innerHTML=""
-
+  lolList.innerHTML=""
   for (let list in data) {
   let eachCard = createNewDiv(data[list].img,data[list].name);
   lolList.appendChild(eachCard);
@@ -37,42 +36,55 @@ function showAllCards(data){
 function createNewDiv(photo, nome){
   let cards = document.createElement('div');
   cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
-  return cards
-  };
-
+  return cards;
+};
 showAllCards(lolArchive);
 
 
-const ordenar = document.getElementById('ordenar')
-document.getElementById('ordenar').addEventListener('change', Az)
+const ordenar = document.getElementById('ordenar');
+document.getElementById('ordenar').addEventListener('change', Az);
 function Az (){
-  const indexSelect = ordenar.selectedIndex
-  const itemSelect = ordenar[indexSelect].value
+  const indexSelect = ordenar.selectedIndex;
+  const itemSelect = ordenar[indexSelect].value;
   if(itemSelect === "a-z"){
-    console.log (orderAz(lolArchive))
-    showAllCards(orderAz(lolArchive))   
-    
+    showAllCards(orderAz(lolArchive));  
   } else {
-    console.log (orderZa(lolArchive))
-    
-    showAllCards(orderZa(lolArchive))
-    }; 
-  };
+    showAllCards(orderZa(lolArchive));
+  }; 
+};
 
 
-document.getElementById('as').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Assassin")))
-
-document.getElementById('ma').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Mage")))
-
-document.getElementById('lu').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Fighter")))
-
-document.getElementById('at').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Marksman")))
-
-document.getElementById('su').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Support")))
-
-document.getElementById('ta').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Tank")))
+document.getElementById('as').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Assassin")));
+document.getElementById('ma').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Mage")));
+document.getElementById('lu').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Fighter")));
+document.getElementById('at').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Marksman")));
+document.getElementById('su').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Support")));
+document.getElementById('ta').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Tank")));
 
 
-  //console.log(ordenar[itemSelect].value)
-  
-  //showAllCards(orderAz);
+//nossa função de busca
+/* document.getElementById('btnbusca').addEventListener('click', printBusca)
+function printBusca (){
+  let valorInput= document.getElementById('txtBusca').value.toUpperCase()
+  if(valorInput === searchName){
+  }
+  showAllCards(lolArchive, valorInput)
+}
+
+printBusca(); */
+
+/* document.getElementById('txtBusca').addEventListener('keyup', printBusca)
+function printBusca (){
+  let valorInput = document.getElementById('txtBusca').value;
+  showAllCards(searchName(lolArchive, valorInput))
+};
+printBusca(); */
+
+document.getElementById('txtBusca').addEventListener('keyup', printBusca)
+function printBusca (){
+  let valorInput = document.getElementById('txtBusca').value;
+  let archeveLower = lolArchive.toLowerCase()
+  showAllCards(searchName(lolArchive, valorInput))
+};
+printBusca();
+
