@@ -9,10 +9,6 @@ export function filterLol(lolArchive, typeChampions) {
   return lolArchive.filter(item => item.tags.includes(typeChampions));
   }; 
 
-  /* export let searchName = function searchLol(lolArchive, nameChampions) {
-    return lolArchive.search(item => item.name(nameChampions));
-    };  */
+ export function searchName (lolArchive, search) { return lolArchive.filter(item =>item.name.toLowerCase().includes(search.toLowerCase())); }
 
-export function searchName(lolArchive, nameChampions) {
-  return lolArchive.filter(item => item.name.includes(nameChampions));
-  };
+
