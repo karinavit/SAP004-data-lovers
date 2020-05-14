@@ -63,28 +63,9 @@ document.getElementById('ta').addEventListener('click',()=> showAllCards(filterL
 
 
 //nossa função de busca
-/* document.getElementById('btnbusca').addEventListener('click', printBusca)
-function printBusca (){
-  let valorInput= document.getElementById('txtBusca').value.toUpperCase()
-  if(valorInput === searchName){
-  }
-  showAllCards(lolArchive, valorInput)
-}
-
-printBusca(); */
-
-/* document.getElementById('txtBusca').addEventListener('keyup', printBusca)
-function printBusca (){
-  let valorInput = document.getElementById('txtBusca').value;
-  showAllCards(searchName(lolArchive, valorInput))
-};
-printBusca(); */
-
-document.getElementById('txtBusca').addEventListener('keyup', printBusca)
-function printBusca (){
-  let valorInput = document.getElementById('txtBusca').value;
-  let archeveLower = lolArchive.toLowerCase()
-  showAllCards(searchName(lolArchive, valorInput))
-};
-printBusca();
+document.getElementById('btnbusca').addEventListener('click', function click () {
+  let valorInput= document.getElementById('txtBusca').value
+  let searchcards = searchName (lolArchive , valorInput)
+  showAllCards(searchcards)
+})
 
