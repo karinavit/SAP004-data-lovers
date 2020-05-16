@@ -7,17 +7,8 @@ import { orderAz, orderZa, filterLol, searchName } from './data.js';
 
 //codigo para pegar o valor do input e imprimir no index2
 
-/*document.getElementById('btn').addEventListener('click', print);
-function print () {
-  sessionStorage.setItem('summonerName', document.getElementById('start').value);
-  var checkSummonerName = sessionStorage.getItem('summonerName');
-    if (checkSummonerName == '') {
-      alert('Verifique se inseriu seu nome invocador');
-    } else {
-      window.location.href='index2.html'
-      document.getElementById('hello').innerHTML = sessionStorage.getItem('summonerName');
-    }
-};*/
+
+
 let lolArchive = [];
   for (let item in lol.data){
   lolArchive.push(lol.data[item]);
@@ -33,6 +24,7 @@ function showAllCards(data){
   lolList.appendChild(eachCard);
   }
 }
+
 function createNewDiv(photo, nome){
   let cards = document.createElement('div');
   cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
@@ -69,3 +61,12 @@ document.getElementById('btnbusca').addEventListener('click', function click () 
   showAllCards(searchcards)
 })
 
+//função Modal
+function startModal(modalId) {
+  const modal = document.getElementById(modalId)
+  modal.classList.add("modal-box")
+}
+
+const logo = document
+
+startModal("modal-fundo")
