@@ -26,7 +26,7 @@ function showAllCards(data){
 }
 
 
-function createNewDiv(photo, nome, info){
+function createNewDiv(photo, nome){
   let cards = document.createElement('div');
   cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
   return cards;
@@ -84,7 +84,7 @@ function showAllCards(data){
 showAllCards(lolArchive);  */
 
 
-let lolModal = document.getElementById("modal-box");
+/* let lolModal = document.getElementById("modal-box");
  function createDataModal(data){
    lolModal.innerHTML=""
 
@@ -100,12 +100,12 @@ let lolModal = document.getElementById("modal-box");
   <p>${info}</p>
   <p>${tags}</p>`);
     return modalDiv;
-   }
+   } */
  
 //showAllCards(lolArchive);
 
 //função Modal
-function startModal() {
+/* function startModal() {
   let modal = document.getElementById('modal-fundo')
     modal.classList.add('modal-fundo')
 
@@ -117,5 +117,30 @@ function startModal() {
 }
 
 let showChamps = document.querySelector(".open-box")
-showChamps.addEventListener('click', ()=> startModal())
+showChamps.addEventListener('click', ()=> startModal()) */
+
+
+let cardsChamps = lolArchive.map((icon)=>
+  `<h2>${icon.name}</h2>
+  <img src = '${icon.img}'>
+  <p>Classe:${icon.tags}<\p>
+  <p>Ataque:${icon.info.attack}<\p>`);
+document.getElementById('box-content').innerHTML = cardsChamps;
+
+
+
+function startModal(modalId){
+  const modal = document.getElementById(modalId);
+  modal.classList.add('mostrar');
+  modal.addEventListener('click', (e)=> {
+    if(e.target.id == modalId || e.target.className == 'fechar')
+    modal.classList.remove('mostrar')
+    
+  });
+}
+
+
+const clickChamps = document.querySelector('.open-box');
+clickChamps.addEventListener('click', ()=>startModal('modal-fundo'));
+
 
