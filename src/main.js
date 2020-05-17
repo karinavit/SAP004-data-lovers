@@ -63,10 +63,17 @@ document.getElementById('btnbusca').addEventListener('click', function click () 
 
 //função Modal
 function startModal(modalId) {
-  const modal = document.getElementById(modalId)
-  modal.classList.add("modal-box")
+  let modal = document.getElementById(modalId)
+  if(modal){
+  modal.classList.add('modal-fundo')
+  modal.addEventListener('click', (e)=>{
+    if(e.target.id == modalId || e.target.className == 'fechar'){
+      modal.classList.remove('modal-fundo')
+    }
+  })
+}
 }
 
-const logo = document
+/* let showChamps = document.querySelector(".open-box")
+showChamps.addEventListener('click', ()=> startModal("modal-fundo")) */
 
-startModal("modal-fundo")
