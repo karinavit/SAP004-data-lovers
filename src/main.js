@@ -25,12 +25,15 @@ function showAllCards(data){
   }
 }
 
-function createNewDiv(photo, nome){
+
+function createNewDiv(photo, nome, info){
   let cards = document.createElement('div');
   cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
   return cards;
 };
 showAllCards(lolArchive);
+
+
 
 
 const ordenar = document.getElementById('ordenar');
@@ -61,19 +64,58 @@ document.getElementById('btnbusca').addEventListener('click', function click () 
   showAllCards(searchcards)
 })
 
+//função para chamar no Modal ( o que vai aparecer no nosso modal)
+
+//showAllcards e CreatNewDiv, usadas aepnas para referência
+/* let lolList = document.getElementById("list");
+function showAllCards(data){
+  lolList.innerHTML=""
+  for (let list in data) {
+  let eachCard = createNewDiv(data[list].img,data[list].name);
+  lolList.appendChild(eachCard);
+  }
+} */
+
+/* function createNewDiv(photo, nome, info){
+  let cards = document.createElement('div');
+  cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
+  return cards;
+};
+showAllCards(lolArchive);  */
+
+
+let lolModal = document.getElementById("modal-box");
+ function createDataModal(data){
+   lolModal.innerHTML=""
+
+   for (let modalbox in data) {
+    let cardsModal = divCardsModal(data[modalbox].img,data[modalbox].name, data[modalbox].info, data[modalbox.tags]);
+    lolModal.appendChild(cardsModal);
+   }}
+
+   function divCardsModal(img,name, info, tags){
+    let modalDiv = document.createElement('div');
+    modalDiv.innerHTML = (`<p>${name}</p>
+    <img src = '${img}'> 
+  <p>${info}</p>
+  <p>${tags}</p>`);
+    return modalDiv;
+   }
+ 
+//showAllCards(lolArchive);
+
 //função Modal
-function startModal(modalId) {
-  let modal = document.getElementById(modalId)
-  if(modal){
-  modal.classList.add('modal-fundo')
+function startModal() {
+  let modal = document.getElementById('modal-fundo')
+    modal.classList.add('modal-fundo')
+
   modal.addEventListener('click', (e)=>{
-    if(e.target.id == modalId || e.target.className == 'fechar'){
+    if(e.target.id == modal || e.target.className == 'fechar'){
       modal.classList.remove('modal-fundo')
     }
   })
 }
-}
 
-/* let showChamps = document.querySelector(".open-box")
-showChamps.addEventListener('click', ()=> startModal("modal-fundo")) */
+let showChamps = document.querySelector(".open-box")
+showChamps.addEventListener('click', ()=> startModal())
 
