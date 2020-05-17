@@ -83,6 +83,7 @@ button{
 #menu{
   height: 20px;
   background-color: #2F4F4F;
+  display: flex;
   text-align: center;
   list-style: none;
   padding: 5px;
