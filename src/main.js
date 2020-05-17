@@ -5,9 +5,6 @@ import lol from './data/lol/lol.js';
 import { orderAz, orderZa, filterLol, searchName } from './data.js';
 // import data from './data/lol/lol.js';
 
-//codigo para pegar o valor do input e imprimir no index2
-
-
 
 let lolArchive = [];
   for (let item in lol.data){
@@ -28,10 +25,13 @@ function showAllCards(data){
 
 function createNewDiv(photo, nome){
   let cards = document.createElement('div');
+  cards.setAttribute('class', 'show-lol');
   cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
+  console.log(cards)
   return cards;
 };
 showAllCards(lolArchive);
+
 
 
 
@@ -140,7 +140,7 @@ function startModal(modalId){
 }
 
 
-const clickChamps = document.querySelector('.open-box');
+const clickChamps = document.querySelector('.show-lol');
 clickChamps.addEventListener('click', ()=>startModal('modal-fundo'));
 
 
