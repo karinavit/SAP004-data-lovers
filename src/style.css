@@ -18,12 +18,14 @@
   height: 400px;
   border: 5px ridge #5F9EA0;
   border-radius: 5px;
-  display: inline-block;
+  display: flex;
   margin: auto;
   padding: 30px;
-  text-align: center;
-  position: relative;
   left: 325px;
+  flex-grow: unset;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #enter-img{
@@ -31,13 +33,14 @@
   height: 250px;
 }
 
-.txt-box{
+#txt-box{
   line-height: 50px;
+  justify-content: center;
   color: #CD9B1D;
   text-shadow: 1px 1px 2px #000000;
 }
 
-.txt-box h2{
+#txt-box h2{
   font-size: 20px;
 }
 
@@ -48,7 +51,10 @@ input{
   border: 2px solid #5F9EA0;
 	margin-bottom: 10px;
   border-radius: 50px;
+  align-self: center;
 }
+
+
 
 button{
   padding: 5px;
@@ -59,7 +65,7 @@ button{
   background-color: #5F9EA0;
 }
 
-/*.dev-name{
+.dev-name{
   background-color: #2F4F4F;
   height: 13px;
   padding: 3px 0;
@@ -68,43 +74,66 @@ button{
   font-size: 12px;
   text-align: center;
 }
-*/
-/* html2 */
 
+@media  (max-width: 600px){
+  #enter-img{
+    width: 250px;
+    height: 110px;
+  }
+  #box{
+    width: 250px;
+    height: 400px;
+  }
+  #txt-box h2{
+    font-size: 15px;
+  }
+  #txt-box p{
+    font-size: 12px;
+  }
+}
+
+/* html2 */
+#top-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 #top-img{
   width: 325px;
   height: 150px;
-  display: inline-block;
-  position: relative;
-  left: 475px;
-  bottom: 70px;
+  justify-content: center;
+  /* left: 475px;
+  bottom: 70px; */
 }
 
 #menu{
   height: 20px;
   background-color: #2F4F4F;
-  display: flex;
-  text-align: center;
-  list-style: none;
-  padding: 5px;
   border-top: 5px ridge #5F9EA0;
   border-bottom: 5px ridge #5F9EA0;
-  position: relative;
-  bottom: 65px;
+  padding: 5px;
+
 }
 
-/*#container{
+.menu-item{
+  display: inline-block;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+
+.container{
   width: 900px;
   height:400px;
   background-color: #2F4F4F;
   display: inline-block;
-  position: relative;
+  /* position: relative; */
   bottom: 65px;
   left: 200px;
   padding: 10px;
 }
-*/
-/* Modal */
+
 
 .modal-container{
   width: 100vw;
@@ -120,6 +149,7 @@ button{
 
 }
 
+/*Modal*/
 .modal-container.mostrar{
   display: flex;
 }
