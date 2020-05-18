@@ -10,7 +10,7 @@ let lolArchive = [];
   for (let item in lol.data){
   lolArchive.push(lol.data[item]);
 };
-console.log(lolArchive)
+//console.log(lolArchive)
 
 //função para printar personagens na tela
 let lolList = document.getElementById("list");
@@ -19,6 +19,9 @@ function showAllCards(data){
   for (let list in data) {
   let eachCard = createNewDiv(data[list].img,data[list].name);
   lolList.appendChild(eachCard);
+  eachCard.addEventListener("click", ()=>{ 
+    startModal() 
+    modalTemplate(data[list].name,data[list].img,data[list].tags, data[list].info.attack)});
   }
 }
 
@@ -27,7 +30,7 @@ function createNewDiv(photo, nome){
   let cards = document.createElement('div');
   cards.setAttribute('class', 'show-lol');
   cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
-  console.log(cards)
+ 
   return cards;
 };
 showAllCards(lolArchive);
@@ -120,27 +123,32 @@ let showChamps = document.querySelector(".open-box")
 showChamps.addEventListener('click', ()=> startModal()) */
 
 
-let cardsChamps = lolArchive.map((icon)=>
+/* let cardsChamps = lolArchive.map((icon)=>
   `<h2>${icon.name}</h2>
   <img src = '${icon.img}'>
-  <p>Classe:${icon.tags}<\p>
-  <p>Ataque:${icon.info.attack}<\p>`);
-document.getElementById('box-content').innerHTML = cardsChamps;
+  <p>Classe:${icon.tags}</p>
+  <p>Ataque:${icon.info.attack}</p>`);
+document.getElementById('box-content').innerHTML = cardsChamps; */
 
+function modalTemplate(nome, img, tags, attack){
+  let cardsChamps = `<h2>${nome}</h2>
+  <img src = '${img}'>
+  <p>Classe:${tags}</p>
+  <p>Ataque:${attack}</p>`;
+  document.getElementById('box-content').innerHTML = cardsChamps;
 
+}
 
-function startModal(modalId){
-  const modal = document.getElementById(modalId);
+function startModal(){
+  const modal = document.getElementById('modal-fundo');
   modal.classList.add('mostrar');
   modal.addEventListener('click', (e)=> {
-    if(e.target.id == modalId || e.target.className == 'fechar')
+    if(e.target.id == 'modal-fundo' || e.target.className == 'fechar')
     modal.classList.remove('mostrar')
     
   });
 }
-
-
-const clickChamps = document.querySelector('.show-lol');
+/* const clickChamps = document.querySelector('.show-lol');
 clickChamps.addEventListener('click', ()=>startModal('modal-fundo'));
-
+ */
 
