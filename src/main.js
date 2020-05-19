@@ -9,7 +9,7 @@ import { orderAz, orderZa, filterLol, searchName, calc } from './data.js';
 let lolArchive = [];
   for (let item in lol.data){
   lolArchive.push(lol.data[item]);
-};
+}
 //console.log(lolArchive)
 
 //função para printar personagens na tela
@@ -32,7 +32,7 @@ function createNewDiv(photo, nome){
   cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
  
   return cards;
-};
+}
 showAllCards(lolArchive);
 
 
@@ -48,8 +48,8 @@ function Az (){
     showAllCards(orderAz(lolArchive));  
   } else {
     showAllCards(orderZa(lolArchive));
-  }; 
-};
+  }
+}
 
 
 document.getElementById('as').addEventListener('click',()=> makeCalc(lolArchive,"Assassin"));
@@ -64,9 +64,8 @@ function makeCalc(data,type) {
 let filtercalc = filterLol(data,type)
 let showCalc = calc(filtercalc, data);
 document.getElementById("calc").innerHTML= `Você sabia que ${showCalc} % dos Champions são ${type}?`;
-
 return showAllCards(filtercalc) 
-  }
+}
 
 
 //nossa função de busca

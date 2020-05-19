@@ -14,4 +14,4 @@ function print () {
       window.location.href='index2.html'
       
     }
-};
+}

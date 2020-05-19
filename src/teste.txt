@@ -117,4 +117,14 @@ showChamps.addEventListener('click', ()=> startModal("modal-fundo"))
 document.getElementById('box-content').innerHTML = cardsChamps; */
 
 
+/* 
+describe('anotherExample', () => {
+  it('is a function', () => {
+    expect(typeof anotherExample).toBe('function');
+  });
+
+  it('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
+  });
+}); */
 
