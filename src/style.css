@@ -6,10 +6,10 @@
 
 #wall{
   background-image: url('imagens/lol.jpg');
-  min-height: 590px;
+  min-height: 670px;
   background-size: 100%;
-  padding: 80px 0 0 0;
-  display: block;
+  /* padding: 80px 0 0 0; */
+  /* display: block; */
 }
 
 #box{
@@ -44,7 +44,7 @@
   font-size: 20px;
 }
 
-input{
+#start{
   width: 40%;
 	margin: 0 auto;
   padding: 10px;
@@ -54,9 +54,7 @@ input{
   align-self: center;
 }
 
-
-
-button{
+.btn{
   padding: 5px;
   width: 100px;
   height: 25px;
@@ -65,7 +63,7 @@ button{
   background-color: #5F9EA0;
 }
 
-.dev-name{
+/* .dev-name{
   background-color: #2F4F4F;
   height: 13px;
   padding: 3px 0;
@@ -73,38 +71,19 @@ button{
   text-shadow: 1px 1px 2px #000000;
   font-size: 12px;
   text-align: center;
-}
-
-@media  (max-width: 600px){
-  #enter-img{
-    width: 250px;
-    height: 110px;
-  }
-  #box{
-    width: 250px;
-    height: 400px;
-  }
-  #txt-box h2{
-    font-size: 15px;
-  }
-  #txt-box p{
-    font-size: 12px;
-  }
-}
+  display: block;
+} */
 
 /* html2 */
 #top-header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
+
 #top-img{
   width: 325px;
   height: 150px;
   justify-content: center;
-  /* left: 475px;
-  bottom: 70px; */
+  bottom: 70px;
 }
 
 #menu{
@@ -113,7 +92,6 @@ button{
   border-top: 5px ridge #5F9EA0;
   border-bottom: 5px ridge #5F9EA0;
   padding: 5px;
-
 }
 
 .menu-item{
@@ -125,13 +103,14 @@ button{
 
 .container{
   width: 900px;
-  height:400px;
+  height:auto;
   background-color: #2F4F4F;
   display: inline-block;
   /* position: relative; */
   bottom: 65px;
   left: 200px;
   padding: 10px;
+  align-items: center;
 }
 
 
@@ -163,6 +142,16 @@ button{
   position: relative;
   
 }
+
+.dev-name{
+  background-color: #2F4F4F;
+  height: 13px;
+  padding: 3px 0;
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+  font-size: 12px;
+  text-align: center;
+}
  
 @keyframes modal {
   from{
@@ -188,6 +177,21 @@ transform: translate3d(0, 0 , 0);
   cursor: pointer;
   }
 
-
+  @media  (max-width: 600px){
+    #enter-img{
+      width: 250px;
+      height: 110px;
+    }
+    #box{
+      width: 250px;
+      height: 400px;
+    }
+    #txt-box h2{
+      font-size: 15px;
+    }
+    #txt-box p{
+      font-size: 12px;
+    }
+  }
 
 

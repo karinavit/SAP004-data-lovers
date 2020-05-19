@@ -1,11 +1,5 @@
-//import lol from '../src/data/lol/lol.js';
+import {orderAz, orderZa, filterLol} from '../src/data.js';
 
-import {orderAz, orderZa} from '../src/data.js';
-
-/* let lolArchive = [];
-  for (let item in lol.data){
-  lolArchive.push(lol.data[item]);
-} */
 const data = [{
     version: "6.24.1",
     id: "Aatrox",
@@ -161,18 +155,6 @@ const data = [{
       attackspeedoffset: -0.1,
       attackspeedperlevel: 3.1}
   }];
-    
-   
-
-/* describe('Ordenar de A à Z', () => {
-  it('is a function', () => {
-    expect(typeof orderAz).toBe('function');
-  });
-
-  it('Se eu mudar o seletor deve retornar os personagens de A à Z', () => {
-    expect(orderAz(lolArchive).toBe((lolArchive.name < lolArchive.name) ? - 1 : 1))
-  }); 
-}) */
 
 describe('Ordenar de A à Z', () => {
   it('is a function', () => {
@@ -192,6 +174,17 @@ describe('Ordenar de Z à A', () => {
   it('Ordenar os personagens de Z à A', () => {
     //console.log(data)
     expect(orderZa(data)).toEqual([data[2], data[1], data[0]])
+  }); 
+})
+
+describe('Filtrar personagens em classes', () => {
+  it('is a function', () => {
+    expect(typeof filterLol).toBe('function');
+  });
+
+  it('Filtrar personagens em classes', () => {
+    //console.log(data)
+    expect(filterLol([data, [""]])).toBe([""])
   }); 
 })
 
