@@ -109,3 +109,12 @@ function startModal(modalId) {
 let showChamps = document.querySelector(".open-box")
 showChamps.addEventListener('click', ()=> startModal("modal-fundo"))
 
+/* let cardsChamps = lolArchive.map((icon)=>
+  `<h2>${icon.name}</h2>
+  <img src = '${icon.img}'>
+  <p>Classe:${icon.tags}</p>
+  <p>Ataque:${icon.info.attack}</p>`);
+document.getElementById('box-content').innerHTML = cardsChamps; */
+
+
+

@@ -2,7 +2,7 @@ import lol from './data/lol/lol.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 // console.log(example, data);
 
-import { orderAz, orderZa, filterLol, searchName } from './data.js';
+import { orderAz, orderZa, filterLol, searchName, calc } from './data.js';
 // import data from './data/lol/lol.js';
 
 
@@ -52,12 +52,21 @@ function Az (){
 };
 
 
-document.getElementById('as').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Assassin")));
-document.getElementById('ma').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Mage")));
-document.getElementById('lu').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Fighter")));
-document.getElementById('at').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Marksman")));
-document.getElementById('su').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Support")));
-document.getElementById('ta').addEventListener('click',()=> showAllCards(filterLol(lolArchive,"Tank")));
+document.getElementById('as').addEventListener('click',()=> makeCalc(lolArchive,"Assassin"));
+document.getElementById('ma').addEventListener('click',()=> makeCalc(lolArchive,"Mage"));
+document.getElementById('lu').addEventListener('click',()=> makeCalc(lolArchive,"Fighter"));
+document.getElementById('at').addEventListener('click',()=> makeCalc(lolArchive,"Marksman"));
+document.getElementById('su').addEventListener('click',()=> makeCalc(lolArchive,"Support"));
+document.getElementById('ta').addEventListener('click',()=> makeCalc(lolArchive,"Tank"));
+
+
+function makeCalc(data,type) {
+let filtercalc = filterLol(data,type)
+let showCalc = calc(filtercalc, data);
+document.getElementById("calc").innerHTML= `Você sabia que ${showCalc} % dos Champions são ${type}?`;
+
+return showAllCards(filtercalc) 
+  }
 
 
 //nossa função de busca
@@ -67,68 +76,8 @@ document.getElementById('btnbusca').addEventListener('click', function click () 
   showAllCards(searchcards)
 })
 
-//função para chamar no Modal ( o que vai aparecer no nosso modal)
-
-//showAllcards e CreatNewDiv, usadas aepnas para referência
-/* let lolList = document.getElementById("list");
-function showAllCards(data){
-  lolList.innerHTML=""
-  for (let list in data) {
-  let eachCard = createNewDiv(data[list].img,data[list].name);
-  lolList.appendChild(eachCard);
-  }
-} */
-
-/* function createNewDiv(photo, nome, info){
-  let cards = document.createElement('div');
-  cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
-  return cards;
-};
-showAllCards(lolArchive);  */
 
 
-/* let lolModal = document.getElementById("modal-box");
- function createDataModal(data){
-   lolModal.innerHTML=""
-
-   for (let modalbox in data) {
-    let cardsModal = divCardsModal(data[modalbox].img,data[modalbox].name, data[modalbox].info, data[modalbox.tags]);
-    lolModal.appendChild(cardsModal);
-   }}
-
-   function divCardsModal(img,name, info, tags){
-    let modalDiv = document.createElement('div');
-    modalDiv.innerHTML = (`<p>${name}</p>
-    <img src = '${img}'> 
-  <p>${info}</p>
-  <p>${tags}</p>`);
-    return modalDiv;
-   } */
- 
-//showAllCards(lolArchive);
-
-//função Modal
-/* function startModal() {
-  let modal = document.getElementById('modal-fundo')
-    modal.classList.add('modal-fundo')
-
-  modal.addEventListener('click', (e)=>{
-    if(e.target.id == modal || e.target.className == 'fechar'){
-      modal.classList.remove('modal-fundo')
-    }
-  })
-}
-
-let showChamps = document.querySelector(".open-box")
-showChamps.addEventListener('click', ()=> startModal()) */
-
-
-/* let cardsChamps = lolArchive.map((icon)=>
-  `<h2>${icon.name}</h2>
-  <img src = '${icon.img}'>
-  <p>Classe:${icon.tags}</p>
-  <p>Ataque:${icon.info.attack}</p>`);
-document.getElementById('box-content').innerHTML = cardsChamps; */
 
 function modalTemplate(nome, img, tags, attack){
   let cardsChamps = `<h2>${nome}</h2>
@@ -151,4 +100,16 @@ function startModal(){
 /* const clickChamps = document.querySelector('.show-lol');
 clickChamps.addEventListener('click', ()=>startModal('modal-fundo'));
  */
+
+
+
+/* const resultadoReduce = array.reduce((acumulador, item) => acumulador + item);
+let resultadoReduce = lolArchive.reduce(function (acumulador, item) {
+  
+
+   return acumulador + item;
+})
+console.log(resultadoReduce); */
+
+
 
