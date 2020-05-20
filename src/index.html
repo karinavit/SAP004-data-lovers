@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>All the Legends</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="wall">
-    <div id="box">
+      <div id="box">
         <img id="enter-img" src="imagens/alllegends.png" alt="">
-        <section class="txt-box">
+        <section id="txt-box">
           <h2>Todas as informações sobre seus campeões aqui!</h2>
           <p>Digite seu nome invocador:</p>
+          <input id ="start" type="text" placeholder="Nome Invocador">
+          <button class="btn" id="btn">Entrar</button>
         </section>
-        <input type="text" placeholder="Nome Invocador">
-        <button class="btn">Entrar</button>
-    </div>
+      </div>
   </div>
-
   <footer class="dev-name">Desenvolvido por Dri Fernando e Ka Vitangelo</footer>
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
+  <script src="login.js" type="module"></script>
 </body>
-
 </html>

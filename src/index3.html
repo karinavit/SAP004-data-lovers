@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title>All the Legends</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-
-  <header>
-    <img id="top-img" src="imagens/alllegends.png" alt="">
-    <nav id="menu">
-      <a href="#">Sobre</a>
-      <a href="#">Campeões</a>
-      <a href="#">Definir</a>
-      <a href="#">Ranking</a>
-    </nav>
-  </header>
-
-  <div>
-    <h2>Campeões</h2>
-    <nav class="menu-champions">
-      <a href="#">Assassinos</a>
-      <a href="#">Lutadores</a>
-      <a href="#">Magos</a>
-      <a href="#">Atiradores</a>
-      <a href="#">Suporte</a>
-      <a href="#">Tanques</a>
-    </nav>
-  </div>
-
-  <div id="search">
-    <!-- <img src="search3.png" id="btnBusca" alt="Buscar"/> VERIFICAR IMAGEM-->
-    <input type="text" id="txtBusca" placeholder="Buscar..." />
-  </div>
-  <div>
-    <h3>Lista de Campeões</h3>
-  </div>
-
-  <footer class="dev-name">Desenvolvido por Dri Fernando e Ka Vitangelo</footer>
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All the Legends</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="wall">
+    <header id = "top-header">
+      <img id="top-img" src="imagens/alllegends.png" alt="">
+      <nav>
+        <ul id="menu">
+          <li class="menu-item"><a href="index.html">Home</a></li>
+          <li class="menu-item"><a href="index2.html">Sobre</a></li>
+          <li class="menu-item"><a href="index3.html">Campeões</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="container" class="container">
+        <div>
+          <p class="order-txt">Odernar por:</p>
+          <select class="order" name="Ordenar por:" id="ordenar">
+            <option class="order" value="a-z">A-Z</option>
+            <option class="order" value="z-a">Z-A</option>
+            <input id="txtBusca" type="text" placeholder="Buscar..." />
+            <button id="btnbusca" type="search">Buscar</button>
+          </select>
+        </div>
+        <div>
+          <h2>Campeões</h2>
+          <ul id="campeoes">
+            <li><button id="as" class="champs">Assasinos</button></li>
+            <li><button id="ma" class="champs">Magos</button></li>
+            <li><button id="lu" class="champs">Lutadores</button></li>
+            <li><button id="at" class="champs">Atiradores</button></li>
+            <li><button id="su" class="champs">Suporte</button></li>
+            <li><button id="ta" class="champs">Tanque</button></li>
+          </ul>
+        </div>
+        <div id="calc" class="calc"></div>
+        <div>
+          <h2>Lista de Campeões</h2>
+        </div>
+        <div id="list" class="show-lol"></div>
+    </div>  
+    <footer class="dev-name">Desenvolvido por Dri Fernando e Ka Vitangelo</footer>
+    <div id = "modal-fundo" class="modal-container">
+      <div id="modal-box" class="modal-box">
+        <div id = "box-content"></div>
+        <button class="fechar">X</button>
+      </div>
+    </div>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>

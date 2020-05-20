@@ -6,9 +6,8 @@
 
 #wall{
   background-image: url('imagens/lol.jpg');
-  min-height: 590px;
+  min-height: 670px;
   background-size: 100%;
-  padding: 80px 0 0 0;
   display: block;
 }
 
@@ -18,12 +17,14 @@
   height: 400px;
   border: 5px ridge #5F9EA0;
   border-radius: 5px;
-  display: inline-block;
+  display: flex;
   margin: auto;
   padding: 30px;
-  text-align: center;
-  position: relative;
   left: 325px;
+  flex-grow: unset;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #enter-img{
@@ -31,32 +32,175 @@
   height: 250px;
 }
 
-.txt-box{
+#txt-box{
   line-height: 50px;
+  justify-content: center;
   color: #CD9B1D;
   text-shadow: 1px 1px 2px #000000;
 }
 
-.txt-box h2{
+#txt-box h2{
   font-size: 20px;
 }
 
-input{
+#start{
   width: 40%;
 	margin: 0 auto;
   padding: 10px;
   border: 2px solid #5F9EA0;
 	margin-bottom: 10px;
   border-radius: 50px;
+  align-self: center;
 }
 
-button{
+.btn{
   padding: 5px;
   width: 100px;
   height: 25px;
   border: 2px solid #5F9EA0;
   border-radius: 2px;
   background-color: #5F9EA0;
+}
+
+#top-header{
+  text-align: center;
+}
+
+#top-img{
+  width: 325px;
+  height: 150px;
+  justify-content: center;
+  bottom: 70px;
+}
+
+#menu{
+  height: 20px;
+  background-color: #2F4F4F;
+  border-top: 5px ridge #5F9EA0;
+  border-bottom: 5px ridge #5F9EA0;
+  padding: 5px;
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color:#CD9B1D
+  }
+a:hover {
+  text-decoration: underline; 
+  color:#CD9B1D; 
+  background:#5F9EA0; 
+  }
+
+.menu-item{
+  display: inline;
+  list-style: none;
+  justify-content: center;
+}
+
+#txtBusca{
+  width: 20%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #5F9EA0;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  }
+
+#btnbusca{
+    padding: 5px;
+    width: 50px;
+    height: 25px;
+    border: 2px solid #5F9EA0;
+    border-radius: 2px;
+    background-color: #5F9EA0;
+}
+
+h1{
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+h2{
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.order{
+  width: 15%;
+	margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #5F9EA0;
+	margin-bottom: 10px;
+  border-radius: 50px;
+  flex-direction: row;
+}
+
+.order-txt{
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.calc{
+  width: 40%;
+  background-color: #5F9EA0;
+  border: 2px solid #CD9B1D;
+	margin-bottom: 10px;
+  border-radius: 50px;
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+  padding: 10px;
+}
+
+.container{
+  width: 900px;
+  height: auto;
+  background-color: #2F4F4F;
+  padding: 10px;
+  margin: auto;
+}
+
+#campeoes{
+  list-style: none;
+}
+
+.champs{
+  padding: 5px;
+  width: 100px;
+  height: 25px;
+  border: 2px solid #2F4F4F;
+  border-radius: 2px;
+  background-color: #5F9EA0;
+  font-size: 15px;
+}
+
+#list {
+  display: flex;
+  justify-content: space-around;
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.show-lol{
+  flex-wrap: wrap;
+  text-align: center;
+
+}
+
+
+.modal-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center; 
+
 }
 
 .dev-name{
@@ -69,40 +213,75 @@ button{
   text-align: center;
 }
 
-/* html2 */
+/*Modal*/
+.modal-container.mostrar{
+  display: flex;
+}
 
-#top-img{
-  width: 325px;
+.modal-box{
+  background: #5F9EA0;
+  width: 60%;
+  width: 150px;
   height: 150px;
-  display: inline-block;
+  padding: 40px;
+  border: 10px solid #CD9B1D;
   position: relative;
-  left: 475px;
-  bottom: 70px;
+  
+}
+ 
+@keyframes modal {
+  from{
+opacity: 0;
+transform: translate3d(0, -60px , 0);
+  } to{
+opacity: 1;
+transform: translate3d(0, 0 , 0);
+  }
 }
 
-#menu{
-  height: 20px;
-  background-color: #2F4F4F;
-  text-align: center;
-  padding: 5px;
-  border-top: 5px ridge #5F9EA0;
-  border-bottom: 5px ridge #5F9EA0;
-  position: relative;
-  bottom: 65px;
-}
+.mostrar.modal{
+  animation: modal .3s;
+  }
 
-#container{
-  width: 900px;
-  height:400px;
-  background-color: #2F4F4F;
-  display: inline-block;
-  position: relative;
-  bottom: 65px;
-  left: 200px;
-  padding: 10px;
-}
+.fechar{
+  position: absolute;
+  background-color:#CD9B1D;
+  color: #000000;
+  font-size: 15px;
+  top: -30px;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5%;
+  cursor: pointer;
+  }
 
+  @media  (max-width: 600px){
+    #enter-img{
+      width: 250px;
+      height: 110px;
+    }
+    #box{
+      width: 250px;
+      height: 400px;
+    }
+    #txt-box h2{
+      font-size: 15px;
+    }
+    #txt-box p{
+      font-size: 12px;
+    }
 
+    #top-img{
+      width: 150px;
+      height: 80px;
+      justify-content: center;
+      bottom: 70px;
+    }
 
+    .container{
+      width: auto;
+      height: auto;
+  }
 
 

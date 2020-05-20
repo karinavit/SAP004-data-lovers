@@ -2,27 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>All the Legends</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body id="wall">
-    
-    <header>
+    <header id = "top-header">
       <img id="top-img" src="imagens/alllegends.png" alt="">
-      <nav id="menu">
-        <a href="#">Sobre</a>
-        <a href="#">Campeões</a>
-        <a href="#">Definir</a>
-        <a href="#">Ranking</a>
-    </nav>
+      <nav>
+        <ul id="menu">
+          <li class="menu-item"><a href="index.html">Home</a></li>
+          <li class="menu-item"><a href="index2.html">Sobre</a></li>
+          <li class="menu-item"><a href="index3.html">Campeões</a></li>
+        </ul>
+      </nav>
     </header>
-    <div id="container">
-      <h2>Olá " "</h2>
+    <div id="container" class="container">
+      <h1 id="hello" value = "summonerName"></h1>
+      <br>
       <p>All the Legends é um site desenvolvido para você visualizar 
       a lista de campeões e assim escolher o melhor para sua estratégia de jogo.</p>
+      <br>
+      <h2>O que é League of Legends</h2>
+      <br>
+      <p>League of Legends é um jogo de estratégia em que duas equipes de cinco poderosos Campeões 
+        se enfrentam para destruir a base uma da outra. Escolha entre mais de 140 Campeões para realizar 
+        jogadas épicas, assegurar abates e destruir torres conforme você luta até a vitória.</p>
+      <br>  
+      <h2>Como jogar</h2>
+      <br>
+      <p>Destrua a Base:<br>O Nexus é o coração da base de uma equipe. Destrua o Nexus inimigo primeiro para
+         vencer a partida.
+         Abra caminho:<br>Sua equipe precisa avançar por pelo menos uma rota para chegar ao Nexus inimigo, 
+         contendo em seu caminho estruturas defensivas chamadas de torres e inibidores. Cada rota tem três 
+         torres e um inibidor, e cada Nexus é protegido por duas torres.
+         Entrando na selva:<br>Entre as rotas, está a selva, onde monstros neutros e plantas ficam. Os dois
+         tipos de monstros mais importantes são o Barão Na’Shor e os dragões, pois abater essas unidades
+         concede efeitos exclusivos para sua equipe e pode mudar o rumo da partida.
+         Escolha sua rota:<br>Existem cinco posições que integram a composição de equipe recomendada para o jogo.
+         Cada rota combina melhor com certos tipos de Campeões e funções, então experimente todas elas ou foque 
+         na rota que mais lhe agradar.
+         Fortaleça seu campeão:<br>Campeões ficam mais fortes obtendo experiência para subir de nível e adquirindo 
+         ouro para comprar itens mais poderosos conforme a partida progride. Manter a atenção nesses dois fatores 
+         é crucial para superar a outra equipe e destruir a base inimiga.
+         Melhore suas habiliadas:<br>Campeões têm cinco habilidades principais, dois Feitiços de Invocador especiais 
+         e até sete itens de uma vez. Descobrir a melhor ordem para subir o nível das habilidades, quais Feitiços 
+         de Invocador usar e a melhor itemização para seu Campeão será essencial para o sucesso da sua equipe.
+      </p>  
     </div>  
     <footer class="dev-name">Desenvolvido por Dri Fernando e Ka Vitangelo</footer>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <script src="printname.js" type="module"></script>
   </body>
 </html>
