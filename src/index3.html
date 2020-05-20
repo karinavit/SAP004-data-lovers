@@ -1,71 +1,58 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>All the Legends</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-
-  <header id = "top-header">
-    <img id="top-img" src="imagens/alllegends.png" alt="">
-    <nav>
-      <ul id="menu">
-        <li class="menu-item"><a href="index.html">Home</a></li>
-        <li class="menu-item"><a href="index2.html">Sobre</a></li>
-        <li class="menu-item"><a href="index3.html">Campeões</a></li>
-        <li class="menu-item"><a href="index4.html">Ranking</a></li>
-      </ul>
-  </nav>
-  </header>
-  <div id="container" class="container">
-  <div>
-    <p>Odernar por:</p>
-    <select class="order" name="Ordenar por:" id="ordenar">
-      <option class="order" value="a-z">A-Z</option>
-      <option class="order" value="z-a">Z-A</option>
-
-    </select>
-  </div>
-  <div>
-    <h2>Campeões</h2>
-    <ul id="campeoes">
-      <li><button id="as">Assasinos</button></li>
-      <li><button id="ma">Magos</button></li>
-      <li><button id="lu">Lutadores</button></li>
-      <li><button id="at">Atiradores</button></li>
-      <li><button id="su">Suporte</button></li>
-      <li><button id="ta">Tanque</button></li>
-     </ul>
-  </div>
-  <div id="calc" class="calc"> </div>
-
-
-  <div id="search">
-    <!-- <img src="search3.png" id="btnBusca" alt="Buscar"/> VERIFICAR IMAGEM-->
-    <input type="text" id="txtBusca" placeholder="Buscar..." />
-    <button id="btnbusca" type="search">Buscar</button> 
-  </div>
-  <div>
-    <h3>Lista de Campeões</h3>
-  </div>
-  <div id="list" class="show-lol"></div>
-</div>
-  <footer class="dev-name">Desenvolvido por Dri Fernando e Ka Vitangelo</footer>
-  <div id = "modal-fundo" class="modal-container">
-    <div id="modal-box" class="modal-box">
-      <div id = "box-content"></div>
-      <!-- <img src = "" id = "test-img">
-      <div>tipo</div>
-      <div>Informações: ataque defesa magia dificuldade</div> -->
-      <button class="fechar">Fechar</button>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All the Legends</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="wall">
+    <header id = "top-header">
+      <img id="top-img" src="imagens/alllegends.png" alt="">
+      <nav>
+        <ul id="menu">
+          <li class="menu-item"><a href="index.html">Home</a></li>
+          <li class="menu-item"><a href="index2.html">Sobre</a></li>
+          <li class="menu-item"><a href="index3.html">Campeões</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="container" class="container">
+        <div>
+          <p class="order-txt">Odernar por:</p>
+          <select class="order" name="Ordenar por:" id="ordenar">
+            <option class="order" value="a-z">A-Z</option>
+            <option class="order" value="z-a">Z-A</option>
+          </select>
+        </div>
+      <div>
+        <h2>Campeões</h2>
+        <ul id="campeoes">
+          <li><button id="as">Assasinos</button></li>
+          <li><button id="ma">Magos</button></li>
+          <li><button id="lu">Lutadores</button></li>
+          <li><button id="at">Atiradores</button></li>
+          <li><button id="su">Suporte</button></li>
+          <li><button id="ta">Tanque</button></li>
+        </ul>
+      </div>
+      <div id="calc" class="calc"> </div>
+      <div id="search">
+        <input id="txtBusca" type="text" placeholder="Buscar..." />
+        <button id="btnbusca" type="search">Buscar</button> 
+      </div>
+      <div>
+        <h3>Lista de Campeões</h3>
+      </div>
+      <div id="list" class="show-lol"></div>
+    </div>  
+    <footer class="dev-name">Desenvolvido por Dri Fernando e Ka Vitangelo</footer>
+    <div id = "modal-fundo" class="modal-container">
+      <div id="modal-box" class="modal-box">
+        <div id = "box-content"></div>
+        <button class="fechar">X</button>
+      </div>
     </div>
-  </div>
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
-</body>
-
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
