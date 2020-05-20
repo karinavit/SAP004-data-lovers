@@ -16,4 +16,4 @@ export function filterLol(lolArchive, typeChampions) {
 
 export function searchName (lolArchive, search) { return lolArchive.filter(item =>item.name.toLowerCase().includes(search.toLowerCase())); }
 
-export const calc = (filterCalc,data) => Math.round(((filterCalc.length) *100) / (data.length))
+export const calc = (filterCalc, data) => Math.round(((filterCalc.length) *100) / (data.length))

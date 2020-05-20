@@ -14,7 +14,7 @@ function showAllCards(data){
   lolList.appendChild(eachCard);
   eachCard.addEventListener("click", ()=>{ 
     startModal() 
-    modalTemplate(data[list].name,data[list].img,data[list].tags, data[list].info.attack)});
+    modalTemplate(data[list].name,data[list].img,data[list].tags, data[list].info.attack, data[list].info.defense, data[list].info.magic, data[list].info.difficulty)});
   };
 };
 function createNewDiv(photo, nome){
@@ -57,11 +57,14 @@ document.getElementById('btnbusca').addEventListener('click', function click () 
   showAllCards(searchcards);
 });
 
-function modalTemplate(nome, img, tags, attack){
+function modalTemplate(nome, img, tags, attack, defense, magic, difficulty){
   let cardsChamps = `<h2>${nome}</h2>
   <img src = '${img}'>
   <p>Classe:${tags}</p>
-  <p>Ataque:${attack}</p>`;
+  <p>Ataque:${attack}</p>
+  <p>Defesa:${defense}</p>
+  <p>Magia:${magic}</p>
+  <p>Dificuldade:${difficulty}</p>`;
   document.getElementById('box-content').innerHTML = cardsChamps;
 };
 
