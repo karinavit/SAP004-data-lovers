@@ -8,8 +8,7 @@
   background-image: url('imagens/lol.jpg');
   min-height: 670px;
   background-size: 100%;
-  /* padding: 80px 0 0 0; */
-  /* display: block; */
+  display: block;
 }
 
 #box{
@@ -63,7 +62,6 @@
   background-color: #5F9EA0;
 }
 
-/* html2 */
 #top-header{
   text-align: center;
 }
@@ -108,7 +106,6 @@ a:hover {
   border: 2px solid #5F9EA0;
   margin-bottom: 10px;
   border-radius: 50px;
-  align-self: center;
   }
 
 #btnbusca{
@@ -130,21 +127,59 @@ h2{
   text-shadow: 1px 1px 2px #000000;
 }
 
+.order{
+  width: 15%;
+	margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #5F9EA0;
+	margin-bottom: 10px;
+  border-radius: 50px;
+  flex-direction: row;
+}
+
+.order-txt{
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.calc{
+  width: 40%;
+  background-color: #5F9EA0;
+  border: 2px solid #CD9B1D;
+	margin-bottom: 10px;
+  border-radius: 50px;
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+  padding: 10px;
+}
+
 .container{
   width: 900px;
   height: auto;
   background-color: #2F4F4F;
-  display: inline-block;
-  
-  /* position: relative; */
-  /* bottom: 65px;
-  left: 200px; */
   padding: 10px;
+  margin: auto;
+}
+
+#campeoes{
+  list-style: none;
+}
+
+.champs{
+  padding: 5px;
+  width: 100px;
+  height: 25px;
+  border: 2px solid #2F4F4F;
+  border-radius: 2px;
+  background-color: #5F9EA0;
+  font-size: 15px;
 }
 
 #list {
   display: flex;
   justify-content: space-around;
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 .show-lol{
