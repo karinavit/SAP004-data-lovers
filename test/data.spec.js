@@ -172,7 +172,6 @@ describe('Ordenar de Z à A', () => {
   });
 
   it('Ordenar os personagens de Z à A', () => {
-    //console.log(data)
     expect(orderZa(data)).toEqual([data[2], data[1], data[0]])
   }); 
 })
@@ -183,7 +182,6 @@ describe('Filtrar personagens em classes', () => {
   });
 
   it('Filtrar personagens em classes', () => {
-    //console.log(data)
     expect(filterLol([data, [""]])).toBe([""])
   }); 
 })

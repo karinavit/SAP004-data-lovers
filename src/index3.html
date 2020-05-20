@@ -18,41 +18,41 @@
       </nav>
     </header>
     <div id="container" class="container">
+        <div>
+          <p class="order-txt">Odernar por:</p>
+          <select class="order" name="Ordenar por:" id="ordenar">
+            <option class="order" value="a-z">A-Z</option>
+            <option class="order" value="z-a">Z-A</option>
+          </select>
+        </div>
       <div>
-        <p>Odernar por:</p>
-        <select class="order" name="Ordenar por:" id="ordenar">
-          <option class="order" value="a-z">A-Z</option>
-          <option class="order" value="z-a">Z-A</option>
-        </select>
+        <h2>Campeões</h2>
+        <ul id="campeoes">
+          <li><button id="as">Assasinos</button></li>
+          <li><button id="ma">Magos</button></li>
+          <li><button id="lu">Lutadores</button></li>
+          <li><button id="at">Atiradores</button></li>
+          <li><button id="su">Suporte</button></li>
+          <li><button id="ta">Tanque</button></li>
+        </ul>
       </div>
-    <div>
-      <h2>Campeões</h2>
-      <ul id="campeoes">
-        <li><button id="as">Assasinos</button></li>
-        <li><button id="ma">Magos</button></li>
-        <li><button id="lu">Lutadores</button></li>
-        <li><button id="at">Atiradores</button></li>
-        <li><button id="su">Suporte</button></li>
-        <li><button id="ta">Tanque</button></li>
-      </ul>
-    </div>
-    <div id="calc" class="calc"> </div>
-    <div id="search">
-      <input type="text" id="txtBusca" placeholder="Buscar..." />
-      <button id="btnbusca" type="search">Buscar</button> 
-    </div>
-    <div>
-      <h3>Lista de Campeões</h3>
-    </div>
-    <div id="list" class="show-lol"></div>
+      <div id="calc" class="calc"> </div>
+      <div id="search">
+        <input id="txtBusca" type="text" placeholder="Buscar..." />
+        <button id="btnbusca" type="search">Buscar</button> 
+      </div>
+      <div>
+        <h3>Lista de Campeões</h3>
+      </div>
+      <div id="list" class="show-lol"></div>
+    </div>  
     <footer class="dev-name">Desenvolvido por Dri Fernando e Ka Vitangelo</footer>
     <div id = "modal-fundo" class="modal-container">
       <div id="modal-box" class="modal-box">
         <div id = "box-content"></div>
-        <button class="fechar">Fechar</button>
+        <button class="fechar">X</button>
       </div>
     </div>
-    <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

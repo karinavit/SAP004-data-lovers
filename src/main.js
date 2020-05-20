@@ -4,7 +4,7 @@ import { orderAz, orderZa, filterLol, searchName, calc } from './data.js';
 let lolArchive = [];
   for (let item in lol.data){
   lolArchive.push(lol.data[item]);
-};
+}
 
 let lolList = document.getElementById("list");
 function showAllCards(data){
@@ -15,14 +15,15 @@ function showAllCards(data){
   eachCard.addEventListener("click", ()=>{ 
     startModal() 
     modalTemplate(data[list].name,data[list].img,data[list].tags, data[list].info.attack, data[list].info.defense, data[list].info.magic, data[list].info.difficulty)});
-  };
-};
+  }
+}
+
 function createNewDiv(photo, nome){
   let cards = document.createElement('div');
   cards.setAttribute('class', 'show-lol');
   cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
-  return cards;
-};
+  return cards
+}
 showAllCards(lolArchive);
 
 const ordenar = document.getElementById('ordenar');
@@ -33,9 +34,9 @@ function Az (){
   if(itemSelect === "a-z"){
     showAllCards(orderAz(lolArchive));  
   } else {
-    showAllCards(orderZa(lolArchive));
-  };
-};
+    showAllCards(orderZa(lolArchive))
+  }
+}
 
 document.getElementById('as').addEventListener('click',()=> makeCalc(lolArchive,"Assassin"));
 document.getElementById('ma').addEventListener('click',()=> makeCalc(lolArchive,"Mage"));
@@ -48,8 +49,8 @@ function makeCalc(data,type) {
   let filterCalc = filterLol(data,type);
   let showCalc = calc(filterCalc, data);
   document.getElementById("calc").innerHTML= `Você sabia que ${showCalc} % dos Champions são ${type}?`;
-  return showAllCards(filterCalc);
-};
+  return showAllCards(filterCalc)
+}
 
 document.getElementById('btnbusca').addEventListener('click', function click () {
   let valorInput= document.getElementById('txtBusca').value;
@@ -66,7 +67,7 @@ function modalTemplate(nome, img, tags, attack, defense, magic, difficulty){
   <p>Magia:${magic}</p>
   <p>Dificuldade:${difficulty}</p>`;
   document.getElementById('box-content').innerHTML = cardsChamps;
-};
+}
 
 function startModal(){
   const modal = document.getElementById('modal-fundo');
@@ -74,9 +75,5 @@ function startModal(){
   modal.addEventListener('click', (e)=> {
     if(e.target.id == 'modal-fundo' || e.target.className == 'fechar')
     modal.classList.remove('mostrar')  
-  });
-};
-
-
-
-
+  })
+}

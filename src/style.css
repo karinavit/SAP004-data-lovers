@@ -63,17 +63,6 @@
   background-color: #5F9EA0;
 }
 
-/* .dev-name{
-  background-color: #2F4F4F;
-  height: 13px;
-  padding: 3px 0;
-  color: #CD9B1D;
-  text-shadow: 1px 1px 2px #000000;
-  font-size: 12px;
-  text-align: center;
-  display: block;
-} */
-
 /* html2 */
 #top-header{
   text-align: center;
@@ -92,25 +81,76 @@
   border-top: 5px ridge #5F9EA0;
   border-bottom: 5px ridge #5F9EA0;
   padding: 5px;
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
 }
 
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color:#CD9B1D
+  }
+a:hover {
+  text-decoration: underline; 
+  color:#CD9B1D; 
+  background:#5F9EA0; 
+  }
+
 .menu-item{
-  display: inline-block;
+  display: inline;
   list-style: none;
-  flex: 1;
   justify-content: center;
+}
+
+#txtBusca{
+  width: 20%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid #5F9EA0;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  align-self: center;
+  }
+
+#btnbusca{
+    padding: 5px;
+    width: 50px;
+    height: 25px;
+    border: 2px solid #5F9EA0;
+    border-radius: 2px;
+    background-color: #5F9EA0;
+}
+
+h1{
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+h2{
+  color: #CD9B1D;
+  text-shadow: 1px 1px 2px #000000;
 }
 
 .container{
   width: 900px;
-  height:auto;
+  height: auto;
   background-color: #2F4F4F;
   display: inline-block;
+  
   /* position: relative; */
-  bottom: 65px;
-  left: 200px;
+  /* bottom: 65px;
+  left: 200px; */
   padding: 10px;
-  align-items: center;
+}
+
+#list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.show-lol{
+  flex-wrap: wrap;
+  text-align: center;
+
 }
 
 
@@ -144,11 +184,12 @@
 }
 
 .modal-box{
-  background: white;
+  background: #5F9EA0;
   width: 60%;
-  min-width: 300px;
+  width: 150px;
+  height: 150px;
   padding: 40px;
-  border: 10px solid #988b7a;
+  border: 10px solid #CD9B1D;
   position: relative;
   
 }
@@ -169,10 +210,13 @@ transform: translate3d(0, 0 , 0);
 
 .fechar{
   position: absolute;
+  background-color:#CD9B1D;
+  color: #000000;
+  font-size: 15px;
   top: -30px;
   right: -30px;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 5%;
   cursor: pointer;
   }
@@ -192,6 +236,17 @@ transform: translate3d(0, 0 , 0);
     #txt-box p{
       font-size: 12px;
     }
+
+    #top-img{
+      width: 150px;
+      height: 80px;
+      justify-content: center;
+      bottom: 70px;
+    }
+
+    .container{
+      width: auto;
+      height: auto;
   }
 
 

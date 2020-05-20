@@ -5,6 +5,6 @@ function print () {
     if (checkSummonerName == '') {
       alert('Verifique se inseriu seu nome invocador');
     } else {
-      window.location.href='index2.html';  
+      window.location.href='index2.html'  
     }
-};
+}
