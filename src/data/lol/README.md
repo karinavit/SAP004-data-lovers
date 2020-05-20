@@ -1,46 +1,109 @@
-# League of Legends (LoL)
+# Data Lovers
 
-League of Legends es un juego de estrategia que se juega en línea y que es
-multijugador. Tiene millones de jugadores en todo el mundo y, por ahora es uno
-de los _esports_ de referencia y que más público atraen.
-Durante el juego, los equipos trabajan juntos para lograr una
-condición de victoria que sucede al destruir la estructura central en la base
-del equipo enemigo.
+## Índice
 
-En todos los modos de juego, los jugadores controlan
-personajes llamados **campeones**, que son elegidos o asignados en cada partida,
-y que tienen un conjunto de habilidades únicas. Es con esos campeones con los
-que se juega toda la partida. Para entender un poco más del juego puedes entrar
-a este [link](https://www.redbull.com/es-es/5-consejos-empezar-jugar-league-of-legends#targetText=Lo%20primero%20que%20tienes%20que,donde%20lucha%20cinco%20contra%20cinco).
+* [1. Definiçao de Produto](#1-definição-de-produto)
+* [2. Histórias de Usuários](#2-histórias-de-usuários)
+* [3. Protótipo de baixa fidelidade](#3-prot[otipo-de-baixa-fidelidade])
+* [4. Implementação da Interface e Checklist](#4-Implementação-da-interface-e-checklist)
 
-## Hallazgos
 
-* Para poder elegir a los campeones que van a combatir en una partida, es
-  importante para el jugador de LoL poder saber cuál es el rol de cada campeón.
-* Adicionalmente al rol, cada campeón tiene distintos niveles de ataque, por
-  ejemplo dentro de los _tanques_ hay campeones con distintos niveles de ataque,
-  defensa, velocidad o poder. Es importante para el jugador de LoL poder saber
-  quiénes son los más poderosos o lo más defensivos, para poder elegir al mejor
-  grupo de campeones para una partida.estarán
-  en tu equipo y que lucharán contra el enemigo.
-* Los campeones tienen distintos tipos de habilidades, algunas inherentes
-  (básicas/principales) a ellos y otras (pasivas/secundarias) que pueden ser
-  adquiridas. En ambos casos, estas habilidades pueden ir desarrollándose hasta
-  alcanzar su máximo nivel.
-* Los campeones tienen distintos roles en los que se desempeñan:
 
-  - Luchador: Especializado en combate cercano. Combinnan objetos de daño con
-    objetos de aguante. También se los conoce como _offtanks_.
-  - Tirador: Especializado en ataque a distancia. Popularmente conocido como
-    _AD Carry_ del inglés _attack damage carry_ o carreador de daño de ataque.
-  - Mago o Hechicero: Especializado en habilidades y daño mágico. Popularmente
-    conocido como _AP Carry_ del inglés _ability power carry_ o carreador de
-    poder de habilidad.
-  - Asesino: Especializado en emboscar al enemigo, atacando por sorpresa y
-    retirándose rápidamente. Su misión es eliminar al jugador más importante del
-    equipo enemigo (generalmente el tirador) aunque ello suponga morir él
-    también.
-  - Tanque: Especializado en resistencia. Su misión es absorber la mayor
-    cantidad de daño posible e iniciar las peleas.
-  - Apoyo o Soporte: Especializado en apoyar a su equipo y aportar visión en el
-    mapa mediante guardianes de visión (_wards_).
+*
+
+## 1.Definiçao de Produto
+Este projeto foi desenvolvido por Adriana Fernando e Karina Vitangelo, alunas da 4a Geração da Laboratoria Brasil (SAP004).
+
+Para este projeto definimos que será desenvolvida uma apliacação de LOL, com o conjunto de dados à saber:
+
+* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
+  Este conjunto mostra a lista de campeões do jogo League of
+  Legends (LoL).
+  - [Pesquisa com jogadores de LoL](src/data/lol/README.pt-BR.md)
+
+A proposta deste projeto é  **construir uma página web para visualizar um _conjunto
+(set) de dados_** que se adeque às necessidades de seu usuário.
+
+Como entregável final terá uma página web que permita **visualizar dados,
+filtrá-los, ordená-los e fazer algum cálculo agregado**. Por cálculo agregado
+nos referimos aos diversos cálculos que podem ser feitos com os dados para mostrar a
+informação mais relevante para os usuários (médias, valores máximos e mínimos,
+etc).
+
+## 2. Histórias de Usuários
+
+### Definição da Persona
+Nossa persona chama-se Alisson, 25 anos, mora na cidade de São Paulo com os pais e dois irmãos mais novos, designer gráfico em uma agência de comunicação.
+Quando Alisson não está trabalhando ele gosta de ouvir músicas do tipo rock, gosta de filmes de aventura, suspense e animes, gosta de games de rpg e por esse motivo começou a jogar League of Legends. Consome redes sociais, mas não interage muito nelas.
+Por não ter muito tempo de jogo no League of Legends, Alisson ainda tem dificuldade em achar o campeão ideal para seu tipo de jogo e busca sempre qual campeão usar para ter uma melhor performance no jogo.
+Com base nesta persona construímos nossas histórias de usuaŕio.
+
+### História de usuário 1:
+"Eu como usuário gostaria de entender como vai funcionar o projeto de acordo com as minhas necessidades."
+
+A definição de pronto da história de usuário 1, se dá por meio de pesquisa inicial onde coletamos informações cruciais para o inicio da implementação do projeto.
+Você pode conferir o resumo da pesquisa neste link:
+
+### História de usuário 2:
+"Eu como usuário gostaria de visualizar as informações em tela assim como mostra o protótipo de forma mais confortável. Com isso, eu já sei o que e como buscar no aplicativo."
+
+A definição de prondo da história de usuário 2 se dá na construção das páginas iniciais da aplicação de modo a ficar simples a visualização.
+
+
+### História de usuário 3:
+"História de usuário 3 - Eu como usuário gostaria de interagir com a página de modo a filtrar e ordenar os personagens na tela."
+
+A definição de pronto da história de usuário 3, se dá quandp os filtros de ordenar e buscar estão concluídos na aplicação.
+
+
+## 3. Protótipo de baixa fidelidade
+Nosso protótipo foi implementado no papel, conforme sequência de imagens abaixo:
+
+#### Imagem 01 - Tela inicial
+
+![IMG-20200517-WA0009](https://user-images.githubusercontent.com/61189470/82395681-66a6e280-9a22-11ea-8f98-85168603070e.jpg)
+
+#### Imagem 02 - Tela de Boas Vindas
+![IMG-20200517-WA0012](https://user-images.githubusercontent.com/61189470/82395689-6ad30000-9a22-11ea-8cf8-b5f1260d22c2.jpg)
+
+#### Imagem 03 - Tela de Campeões
+![IMG-20200517-WA0013](https://user-images.githubusercontent.com/61189470/82395692-6c042d00-9a22-11ea-9b5a-33b8d9849a2f.jpg)
+
+#### Imagem 04 - 
+![IMG-20200517-WA0014](https://user-images.githubusercontent.com/61189470/82395695-6dcdf080-9a22-11ea-8f9c-2838055f75f6.jpg)
+
+
+Implementamos o protótipo no Marvel, veja neste [link](https://marvelapp.com/4fa0hbe)  e teste também!
+
+#### Testes de usabilidade
+Realizamos testes de usabilidade com base no protótipo acima. O mesmo nos trouxe uma aceitação em 100% com relação ao layout de fácil entendimento, veja neste [link](https://drive.google.com/file/d/17i8f8b4D3puQMu0jJ0CgbDwF4lAdX2_4/view?usp=sharing) as respostas da nossa pesquisa.
+
+## 4.  Implementação da Interface e Checklist
+Em nossa aplicação que pode ser visualizada neste [link]( ) no GitHub Pages, o usuário entra com seu nome e na tela seguinte tem uma breve saudação e curiosidade sobre o LOL.
+Ao clicar no link campeões, a página apresentada é possível que o usuário faça as seguintes interações:
+- [x] Ordenar os personagens de forma crescente e decrescente
+- [x] Filtrar por tipo de campeão ( Assasino, Tanque, Suporte, etc...)
+- [x] Buscar personagem por nome, em todas as formas letras maiusculas e minusculas
+- [x] Ao filtrar o tipo de campeão, uma curiosidade aparece dizendo a procentagem do tipo.
+
+
+Implementamos a interface conforme checklist abaixo:
+
+- [x] Usar VanillaJS.
+- [x] Não utilizar `this`.
+- [x] Passa pelo linter (`npm run pretest`)
+- [x] Passa pelos testes (`npm test`)
+* [ ] Testes unitários cobrem um mínimo de 70% de statements, functions,
+  lines e branches.
+- [x] Inclui uma definição de produto clara e informativa no `README.md`.
+- [x] Inclui histórias de usuário no `README.md`.
+- [x] Inclui rascunho da solução (protótipo de baixa fidelidade) no
+  `README.md`.
+- [x] Inclui uma lista de problemas detectados nos testes de usabilidade no `README.md`.
+- [x] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
+- [x] UI: Permite ordenar dados por um ou mais campos (asc e desc).
+- [x] UI: Permite filtrar dados com base em uma condição.
+- [x] UI: É responsivo.
+
+## 4. Considerações Finais
+Estamos abertas aos feedbacks e demais considerações.
