@@ -6,7 +6,7 @@
 * [2. Histórias de Usuários](#2-histórias-de-usuários)
 * [3. Protótipo de baixa fidelidade](#3-prot[otipo-de-baixa-fidelidade])
 * [4. Implementação da Interface e Checklist](#4-Implementação-da-interface-e-checklist)
-* [5. Critérios mínimos de aceitação do projeto](#5-criterios-minimos-de-aceitacao-do-projeto)
+
 
 
 *
@@ -63,43 +63,47 @@ Nosso protótipo foi implementado no papel, conforme sequência de imagens abaix
 
 ![IMG-20200517-WA0009](https://user-images.githubusercontent.com/61189470/82395681-66a6e280-9a22-11ea-8f98-85168603070e.jpg)
 
-#### Imagem 02
+#### Imagem 02 - Tela de Boas Vindas
 ![IMG-20200517-WA0012](https://user-images.githubusercontent.com/61189470/82395689-6ad30000-9a22-11ea-8cf8-b5f1260d22c2.jpg)
 
-#### Imagem 03
+#### Imagem 03 - Tela de Campeões
 ![IMG-20200517-WA0013](https://user-images.githubusercontent.com/61189470/82395692-6c042d00-9a22-11ea-9b5a-33b8d9849a2f.jpg)
 
-#### Imagem 04
+#### Imagem 04 - 
 ![IMG-20200517-WA0014](https://user-images.githubusercontent.com/61189470/82395695-6dcdf080-9a22-11ea-8f9c-2838055f75f6.jpg)
 
 
 Implementamos o protótipo no Marvel, veja neste [link](https://marvelapp.com/4fa0hbe)  e teste também!
 
 #### Testes de usabilidade
-Realizamos testes de usabilidade com base no protótipo acima. O mesmo nos trouxe uma aceitação em 100% com relação ao layout de fácil entendimento, conforme gráfico abaixo:
+Realizamos testes de usabilidade com base no protótipo acima. O mesmo nos trouxe uma aceitação em 100% com relação ao layout de fácil entendimento, veja neste [link](https://drive.google.com/file/d/17i8f8b4D3puQMu0jJ0CgbDwF4lAdX2_4/view?usp=sharing) as respostas da nossa pesquisa.
 
 ## 4.  Implementação da Interface e Checklist
+Em nossa aplicação que pode ser visualizada neste [link]( ) no GitHub Pages, o usuário entra com seu nome e na tela seguinte tem uma breve saudação e curiosidade sobre o LOL.
+Ao clicar no link campeões, a página apresentada é possível que o usuário faça as seguintes interações:
+- [x] Ordenar os personagens de forma crescente e decrescente
+- [x] Filtrar por tipo de campeão ( Assasino, Tanque, Suporte, etc...)
+- [x] Buscar personagem por nome, em todas as formas letras maiusculas e minusculas
+- [x] Ao filtrar o tipo de campeão, uma curiosidade aparece dizendo a procentagem do tipo.
+
+
 Implementamos a interface conforme checklist abaixo:
 
 - [x] Usar VanillaJS.
 - [x] Não utilizar `this`.
-* [ ] Passa pelo linter (`npm run pretest`)
-* [ ] Passa pelos testes (`npm test`)
+- [x] Passa pelo linter (`npm run pretest`)
+- [x] Passa pelos testes (`npm test`)
 * [ ] Testes unitários cobrem um mínimo de 70% de statements, functions,
   lines e branches.
 - [x] Inclui uma definição de produto clara e informativa no `README.md`.
 - [x] Inclui histórias de usuário no `README.md`.
 - [x] Inclui rascunho da solução (protótipo de baixa fidelidade) no
   `README.md`.
-* [ ] Inclui uma lista de problemas detectados nos testes de usabilidade no `README.md`.
+- [x] Inclui uma lista de problemas detectados nos testes de usabilidade no `README.md`.
 - [x] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
 - [x] UI: Permite ordenar dados por um ou mais campos (asc e desc).
 - [x] UI: Permite filtrar dados com base em uma condição.
-* [ ] UI: É responsivo.
+- [x] UI: É responsivo.
 
 ## 4. Considerações Finais
-Neste projeto fizemos nosso melhor para colocar um lençol de solteiro na cama KingSize. 
 Estamos abertas aos feedbacks e demais considerações.
-Sinta-se à vontade em nos deixar um recado neste form: 
-
-é anônimo.
