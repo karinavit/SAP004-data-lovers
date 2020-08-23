@@ -10,7 +10,7 @@ Cópia de Segurança do Projeto Entregue
 * [5. Considerações Finais](#5-considerações-finais)
 
 
-*
+
 
 ## 1.Definiçao de Produto
 Este projeto foi desenvolvido por [Adriana Fernando](https://github.com/AdrianaFernando) 
