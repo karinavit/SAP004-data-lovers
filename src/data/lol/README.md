@@ -9,9 +9,6 @@ Cópia de Segurança do Projeto Entregue
 * [4. Implementação da Interface e Checklist](#4-Implementação-da-interface-e-checklist)
 * [5. Considerações Finais](#5-considerações-finais)
 
-
-
-
 ## 1.Definiçao de Produto
 Este projeto foi desenvolvido por [Adriana Fernando](https://github.com/AdrianaFernando) 
 e [Karina Vitangelo](https://github.com/karinavit) alunas da 4a Geração da [Laboratoria](https://github.com/Laboratoria) (SAP004).
