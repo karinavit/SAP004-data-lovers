@@ -1,3 +1,4 @@
+Cópia de Segurança do Projeto Entregue
 # Data Lovers
 
 ## Índice
@@ -6,13 +7,11 @@
 * [2. Histórias de Usuários](#2-histórias-de-usuários)
 * [3. Protótipo de baixa fidelidade](#3-prot[otipo-de-baixa-fidelidade])
 * [4. Implementação da Interface e Checklist](#4-Implementação-da-interface-e-checklist)
-
-
-
-*
+* [5. Considerações Finais](#5-considerações-finais)
 
 ## 1.Definiçao de Produto
-Este projeto foi desenvolvido por Adriana Fernando e Karina Vitangelo, alunas da 4a Geração da Laboratoria Brasil (SAP004).
+Este projeto foi desenvolvido por [Adriana Fernando](https://github.com/AdrianaFernando) 
+e [Karina Vitangelo](https://github.com/karinavit) alunas da 4a Geração da [Laboratoria](https://github.com/Laboratoria) (SAP004).
 
 Para este projeto definimos que será desenvolvida uma apliacação de LOL, com o conjunto de dados à saber:
 
@@ -79,7 +78,11 @@ Implementamos o protótipo no Marvel, veja neste [link](https://marvelapp.com/4f
 Realizamos testes de usabilidade com base no protótipo acima. O mesmo nos trouxe uma aceitação em 100% com relação ao layout de fácil entendimento, veja neste [link](https://drive.google.com/file/d/17i8f8b4D3puQMu0jJ0CgbDwF4lAdX2_4/view?usp=sharing) as respostas da nossa pesquisa.
 
 ## 4.  Implementação da Interface e Checklist
-Em nossa aplicação que pode ser visualizada neste [link]( ) no GitHub Pages, o usuário entra com seu nome e na tela seguinte tem uma breve saudação e curiosidade sobre o LOL.
+Em nossa aplicação que pode ser visualizada neste [link](https://karinavit.github.io/SAP004-data-lovers/src/) no GitHub Pages, o usuário entra com seu nome e na tela seguinte tem uma breve saudação e curiosidade sobre o LOL.
+
+**Imagem da Tela Inicial**
+![DataLovers](https://user-images.githubusercontent.com/61189470/90974049-fe264080-e4fd-11ea-96e9-044b3d6ab281.png)
+
 Ao clicar no link campeões, a página apresentada é possível que o usuário faça as seguintes interações:
 - [x] Ordenar os personagens de forma crescente e decrescente
 - [x] Filtrar por tipo de campeão ( Assasino, Tanque, Suporte, etc...)
@@ -105,5 +108,5 @@ Implementamos a interface conforme checklist abaixo:
 - [x] UI: Permite filtrar dados com base em uma condição.
 - [x] UI: É responsivo.
 
-## 4. Considerações Finais
+## 5. Considerações Finais
 Estamos abertas aos feedbacks e demais considerações.
