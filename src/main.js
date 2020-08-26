@@ -21,7 +21,7 @@ function showAllCards(data){
 function createNewDiv(photo, nome){
   let cards = document.createElement('div');
   cards.setAttribute('class', 'show-lol');
-  cards.innerHTML = (`<img src = '${photo}'> <p>${nome}</p>`);
+  cards.innerHTML = (`<img class='tamanho' src = '${photo}'> <p>${nome}</p>`);
   return cards
 }
 showAllCards(lolArchive);
@@ -48,7 +48,9 @@ document.getElementById('ta').addEventListener('click',()=> makeCalc(lolArchive,
 function makeCalc(data,type) {
   let filterCalc = filterLol(data,type);
   let showCalc = calc(filterCalc, data);
-  document.getElementById("calc").innerHTML= `Você sabia que ${showCalc} % dos Champions são ${type}?`;
+  document.getElementById("calc").classList.remove("calc-display");
+  document.getElementById("calc").innerHTML= `Você sabia que ${showCalc} % dos Champions são ${type}?
+  `;
   return showAllCards(filterCalc)
 }
 

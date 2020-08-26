@@ -142,6 +142,10 @@ h2{
   text-shadow: 1px 1px 2px #000000;
 }
 
+.calc-display{
+  display: none;
+}
+
 .calc{
   width: 40%;
   background-color: #5F9EA0;
@@ -154,11 +158,17 @@ h2{
 }
 
 .container{
+  display: flex;
   width: 900px;
   height: auto;
   background-color: #2F4F4F;
   padding: 10px;
   margin: auto;
+}
+
+.lista-campeoes{
+  width: 80%;
+  
 }
 
 #campeoes{
@@ -183,11 +193,23 @@ h2{
 }
 
 .show-lol{
-  flex-wrap: wrap;
+  padding: 20px;
   text-align: center;
+  width: 12%;
+  
 
 }
+.show-lol-container{
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.tamanho{
+  margin-bottom: 8px;
+  width: 50px;
+  height: 50px;
+  
+}
 
 .modal-container{
   width: 100vw;
