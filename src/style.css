@@ -128,8 +128,7 @@ h2{
 }
 
 .order{
-  width: 15%;
-	margin: 0 auto;
+  margin: 0 auto;
   padding: 10px;
   border: 2px solid #5F9EA0;
 	margin-bottom: 10px;
@@ -158,13 +157,22 @@ h2{
 }
 
 .container{
-  display: flex;
   width: 900px;
-  height: auto;
   background-color: #2F4F4F;
   padding: 10px;
   margin: auto;
 }
+
+/* .instrucoes{
+
+} */
+
+.personagens{
+  display: flex;
+}
+
+
+
 
 .lista-campeoes{
   width: 80%;
