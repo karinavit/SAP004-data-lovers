@@ -5,7 +5,7 @@
 * [1. Introdução](#1-introdução)
 * [2. Implementação da Interface e Checklist](#2-Implementação-da-interface-e-checklist)
 * [3. Histórias de Usuários](#3-histórias-de-usuários)
-* [4. Protótipo de baixa fidelidade](#4-prot[otipo-de-baixa-fidelidade])
+* [4. Protótipo de baixa fidelidade](#4-prototipo-de-baixa-fidelidade])
 * [5. Considerações Finais](#5-considerações-finais)
 
 ## 1.Definiçao de Produto
@@ -29,13 +29,13 @@ informação mais relevante para os usuários (médias, valores máximos e míni
 etc).
 
 ### Planejamento
-Com base na Metodologia Ágil, foi criado um quadro no Trello, onde definimos tarefas de acordo com cada história de usuário, veja mais sobre as Histórias de Usuários
- Definição de Produto e Histórias de Usuários, e assim conseguíamos acompanhar, revisar e ajustar conforme necessário.
+Com base na Metodologia Ágil, foi criado um quadro no Trello, onde definimos tarefas de acordo com cada história de usuário, veja mais sobre as [3. Histórias de Usuários](#3-histórias-de-usuários)
+e assim conseguíamos acompanhar, revisar e ajustar conforme necessário.
 
 ### Nosso Quadro
 ![oie_QJJWTbmwP3xv](https://user-images.githubusercontent.com/61189470/91669798-332e2680-eaee-11ea-88f8-ed9f2657b3e3.png)
 
-## 2.  Implementação da Interface e Checklist
+## 2. Implementação da Interface e Checklist
 Em nossa aplicação que pode ser visualizada neste [link](https://karinavit.github.io/SAP004-data-lovers/src/) no GitHub Pages, o usuário entra com seu nome e na tela seguinte tem uma breve saudação e curiosidade sobre o LOL.
 
 **Imagem da Tela Inicial**
