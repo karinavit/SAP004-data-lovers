@@ -5,7 +5,7 @@
 * [1. Introdução](#1-introdução)
 * [2. Implementação da Interface e Checklist](#2-Implementação-da-interface-e-checklist)
 * [3. Histórias de Usuários](#3-histórias-de-usuários)
-* [4. Protótipo de baixa fidelidade](#4-protótipo-de-baixa-fidelidade])
+* [4. Protótipo de baixa fidelidade](#4-protótipo-de-baixa-fidelidade)
 * [5. Considerações Finais](#5-considerações-finais)
 
 ## 1.Definiçao de Produto
