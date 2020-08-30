@@ -2,10 +2,10 @@
 
 ## Índice
 
-* [1. Definiçao de Produto](#1-definição-de-produto)
-* [2. Histórias de Usuários](#2-histórias-de-usuários)
-* [3. Protótipo de baixa fidelidade](#3-prot[otipo-de-baixa-fidelidade])
-* [4. Implementação da Interface e Checklist](#4-Implementação-da-interface-e-checklist)
+* [1. Introdução](#1-introdução)
+* [2. Implementação da Interface e Checklist](#2-Implementação-da-interface-e-checklist)
+* [3. Histórias de Usuários](#3-histórias-de-usuários)
+* [4. Protótipo de baixa fidelidade](#4-prot[otipo-de-baixa-fidelidade])
 * [5. Considerações Finais](#5-considerações-finais)
 
 ## 1.Definiçao de Produto
@@ -28,7 +28,43 @@ nos referimos aos diversos cálculos que podem ser feitos com os dados para most
 informação mais relevante para os usuários (médias, valores máximos e mínimos,
 etc).
 
-## 2. Histórias de Usuários
+### Planejamento
+Com base na Metodologia Ágil, foi criado um quadro no Trello, onde definimos tarefas de acordo com cada história de usuário, veja mais sobre as Histórias de Usuários
+ Definição de Produto e Histórias de Usuários, e assim conseguíamos acompanhar, revisar e ajustar conforme necessário.
+
+### Nosso Quadro
+![oie_QJJWTbmwP3xv](https://user-images.githubusercontent.com/61189470/91669798-332e2680-eaee-11ea-88f8-ed9f2657b3e3.png)
+
+## 2.  Implementação da Interface e Checklist
+Em nossa aplicação que pode ser visualizada neste [link](https://karinavit.github.io/SAP004-data-lovers/src/) no GitHub Pages, o usuário entra com seu nome e na tela seguinte tem uma breve saudação e curiosidade sobre o LOL.
+
+**Imagem da Tela Inicial**
+![DataLovers](https://user-images.githubusercontent.com/61189470/90974049-fe264080-e4fd-11ea-96e9-044b3d6ab281.png)
+
+Ao clicar no link campeões, a página apresentada é possível que o usuário faça as seguintes interações:
+- [x] Ordenar os personagens de forma crescente e decrescente
+- [x] Filtrar por tipo de campeão ( Assasino, Tanque, Suporte, etc...)
+- [x] Buscar personagem por nome, em todas as formas letras maiusculas e minusculas
+- [x] Ao filtrar o tipo de campeão, uma curiosidade aparece dizendo a procentagem do tipo.
+
+Implementamos a interface conforme checklist abaixo:
+
+- [x] Usar VanillaJS.
+- [x] Não utilizar `this`.
+- [x] Passa pelo linter (`npm run pretest`)
+- [x] Passa pelos testes (`npm test`)
+- [x] Inclui uma definição de produto clara e informativa no `README.md`.
+- [x] Inclui histórias de usuário no `README.md`.
+- [x] Inclui rascunho da solução (protótipo de baixa fidelidade) no
+  `README.md`.
+- [x] Inclui uma lista de problemas detectados nos testes de usabilidade no `README.md`.
+- [x] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
+- [x] UI: Permite ordenar dados por um ou mais campos (asc e desc).
+- [x] UI: Permite filtrar dados com base em uma condição.
+- [x] UI: É responsivo.
+
+
+## 3. Histórias de Usuários
 
 ### Definição da Persona
 Nossa persona chama-se Alisson, 25 anos, mora na cidade de São Paulo com os pais e dois irmãos mais novos, designer gráfico em uma agência de comunicação.
@@ -54,7 +90,7 @@ A definição de prondo da história de usuário 2 se dá na construção das p�
 A definição de pronto da história de usuário 3, se dá quandp os filtros de ordenar e buscar estão concluídos na aplicação.
 
 
-## 3. Protótipo de baixa fidelidade
+## 4. Protótipo de baixa fidelidade
 Nosso protótipo foi implementado no papel, conforme sequência de imagens abaixo:
 
 #### Imagem 01 - Tela inicial
@@ -76,36 +112,8 @@ Implementamos o protótipo no Marvel, veja neste [link](https://marvelapp.com/4f
 #### Testes de usabilidade
 Realizamos testes de usabilidade com base no protótipo acima. O mesmo nos trouxe uma aceitação em 100% com relação ao layout de fácil entendimento, veja neste [link](https://drive.google.com/file/d/17i8f8b4D3puQMu0jJ0CgbDwF4lAdX2_4/view?usp=sharing) as respostas da nossa pesquisa.
 
-## 4.  Implementação da Interface e Checklist
-Em nossa aplicação que pode ser visualizada neste [link](https://karinavit.github.io/SAP004-data-lovers/src/) no GitHub Pages, o usuário entra com seu nome e na tela seguinte tem uma breve saudação e curiosidade sobre o LOL.
-
-**Imagem da Tela Inicial**
-![DataLovers](https://user-images.githubusercontent.com/61189470/90974049-fe264080-e4fd-11ea-96e9-044b3d6ab281.png)
-
-Ao clicar no link campeões, a página apresentada é possível que o usuário faça as seguintes interações:
-- [x] Ordenar os personagens de forma crescente e decrescente
-- [x] Filtrar por tipo de campeão ( Assasino, Tanque, Suporte, etc...)
-- [x] Buscar personagem por nome, em todas as formas letras maiusculas e minusculas
-- [x] Ao filtrar o tipo de campeão, uma curiosidade aparece dizendo a procentagem do tipo.
-
-
-Implementamos a interface conforme checklist abaixo:
-
-- [x] Usar VanillaJS.
-- [x] Não utilizar `this`.
-- [x] Passa pelo linter (`npm run pretest`)
-- [x] Passa pelos testes (`npm test`)
+## 5. Considerações Finais
+Visando melhorar constantemente nossa aplicação, abaixo inserimos itens para implementação futura:
+* [ ] Melhorias no CSS conforme pesquisa
 * [ ] Testes unitários cobrem um mínimo de 70% de statements, functions,
   lines e branches.
-- [x] Inclui uma definição de produto clara e informativa no `README.md`.
-- [x] Inclui histórias de usuário no `README.md`.
-- [x] Inclui rascunho da solução (protótipo de baixa fidelidade) no
-  `README.md`.
-- [x] Inclui uma lista de problemas detectados nos testes de usabilidade no `README.md`.
-- [x] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
-- [x] UI: Permite ordenar dados por um ou mais campos (asc e desc).
-- [x] UI: Permite filtrar dados com base em uma condição.
-- [x] UI: É responsivo.
-
-## 5. Considerações Finais
-Estamos abertas aos feedbacks e demais considerações.
